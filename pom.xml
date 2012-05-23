@@ -10,7 +10,16 @@
 	<artifactId>fsm-fxedit</artifactId>
 	<name>bbvfsm - Statemachine Editor</name>
 
+	<properties>
+		<guava.version>12.0</guava.version>
+		<java.source.version>1.7</java.source.version>
+	</properties>
+
 	<dependencies>
+		<dependency>
+			<groupId>com.google.guava</groupId>
+			<artifactId>guava</artifactId>
+		</dependency>
 		<dependency>
 			<groupId>com.oracle</groupId>
 			<artifactId>javafx</artifactId>
