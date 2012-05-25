@@ -11,9 +11,11 @@
 	<name>bbvfsm - Statemachine Editor</name>
 
 	<properties>
+		<java.source.version>1.7</java.source.version>
 		<junit.version>4.8.2</junit.version>
 		<guava.version>12.0</guava.version>
-		<java.source.version>1.7</java.source.version>
+		<guice.version>3.0</guice.version>
+		<javafx.version>3.0</javafx.version>
 	</properties>
 
 	<dependencies>
@@ -22,9 +24,14 @@
 			<artifactId>guava</artifactId>
 		</dependency>
 		<dependency>
+			<groupId>com.google.inject</groupId>
+			<artifactId>guice</artifactId>
+			<version>${guice.version}</version>
+		</dependency>
+		<dependency>
 			<groupId>com.oracle</groupId>
 			<artifactId>javafx</artifactId>
-			<version>2.2</version>
+			<version>${javafx.version}</version>
 			<systemPath>${fx.home}/rt/lib/jfxrt.jar</systemPath>
 			<scope>system</scope>
 		</dependency>
