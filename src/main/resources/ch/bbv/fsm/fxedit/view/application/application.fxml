@@ -6,13 +6,14 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.paint.*?>
 
-<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="454.0" prefWidth="767.0" xmlns:fx="http://javafx.com/fxml" fx:controller="ch.bbv.fsm.fxedit.view.FXSampleController">
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="454.0" prefWidth="767.0" xmlns:fx="http://javafx.com/fxml"
+ fx:controller="ch.bbv.fsm.fxedit.view.application.FsmEditorApplicationController">
   <children>
     <MenuBar id="menuBar1" prefWidth="600.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
       <menus>
         <Menu id="fileMenu1" text="File">
           <items>
-            <MenuItem id="close1" text="Close" />
+            <MenuItem id="close" text="Close" onAction="#close"/>
           </items>
         </Menu>
         <Menu id="editMenu1" text="Edit">
