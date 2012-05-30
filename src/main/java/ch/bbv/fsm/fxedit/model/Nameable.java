@@ -3,6 +3,9 @@ package ch.bbv.fsm.fxedit.model;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
+/**
+ * Can be used as base class for all model objects that have a name.
+ */
 public class Nameable {
 
 	private final SimpleStringProperty name = new SimpleStringProperty(this, "name");
