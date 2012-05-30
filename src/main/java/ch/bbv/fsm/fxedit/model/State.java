@@ -1,54 +1,51 @@
 package ch.bbv.fsm.fxedit.model;
 
-import java.util.List;
+import javafx.beans.property.BooleanProperty;
+import javafx.beans.property.ObjectProperty;
+import javafx.beans.property.SimpleBooleanProperty;
+import javafx.beans.property.SimpleObjectProperty;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 
-import lombok.Getter;
-import lombok.Setter;
+public class State extends Nameable {
 
-import com.google.common.collect.ImmutableList;
-import com.google.common.collect.Lists;
+	private final SimpleObjectProperty<HistoryType> historyType = new SimpleObjectProperty<>(this, "historyType");
 
-public class State {
+	private final SimpleBooleanProperty init = new SimpleBooleanProperty(this, "init");
 
-	@Getter
-	@Setter
-	private String name;
+	private final ObservableList<State> subStates = FXCollections.observableArrayList();
 
-	@Getter
-	@Setter
-	private HistoryType historyType;
+	private final ObservableList<Transition> transitions = FXCollections.observableArrayList();
 
-	@Getter
-	@Setter
-	private boolean init;
-
-	private final List<State> subStates = Lists.newLinkedList();
-
-	private final List<Transition> transitions = Lists.newLinkedList();
-
-	public void addSubState(final State state) {
-		subStates.add(state);
-		// TODO check that this state is not already used (introduce parent
-		// relation and remove it from there)
+	public HistoryType getHistoryType() {
+		return historyType.get();
 	}
 
-	public void removeSubState(final State state) {
-		subStates.remove(state);
+	public void setHistoryType(final HistoryType ht) {
+		historyType.set(ht);
 	}
 
-	public ImmutableList<State> getSubStates() {
-		return ImmutableList.copyOf(subStates);
+	public ObjectProperty<HistoryType> historyTypeProperty() {
+		return historyType;
 	}
 
-	public void addTransition(final Transition t) {
-		transitions.add(t);
+	public boolean isInit() {
+		return init.get();
 	}
 
-	public void removeTransition(final Transition t) {
-		transitions.remove(t);
+	public void setInit(final boolean init) {
+		this.init.set(init);
 	}
 
-	public ImmutableList<Transition> getTransitions() {
-		return ImmutableList.copyOf(transitions);
+	public BooleanProperty initPropert() {
+		return init;
+	}
+
+	public ObservableList<State> getSubStates() {
+		return subStates;
+	}
+
+	public ObservableList<Transition> getTransitions() {
+		return transitions;
 	}
 }
