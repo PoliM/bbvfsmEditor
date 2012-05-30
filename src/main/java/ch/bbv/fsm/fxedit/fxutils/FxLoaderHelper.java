@@ -42,4 +42,5 @@ public class FxLoaderHelper {
 			// Nothing to do here
 		}
 	}
+
 }

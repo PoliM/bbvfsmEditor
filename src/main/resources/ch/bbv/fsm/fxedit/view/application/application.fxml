@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.paint.*?>
 
-<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="454.0" prefWidth="767.0" xmlns:fx="http://javafx.com/fxml"
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="454.0" prefWidth="767.0" xmlns:fx="http://javafx.com/fxml"
  fx:controller="ch.bbv.fsm.fxedit.view.application.FsmEditorApplicationController">
   <children>
     <MenuBar id="menuBar1" prefWidth="600.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
@@ -23,7 +23,7 @@
         </Menu>
         <Menu id="helpMenu1" text="Help">
           <items>
-            <MenuItem id="about1" text="About" />
+            <MenuItem id="about1" text="About" onAction="#about"/>
           </items>
         </Menu>
       </menus>
