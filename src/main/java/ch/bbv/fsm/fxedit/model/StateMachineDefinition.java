@@ -10,6 +10,9 @@ import lombok.ToString;
 
 import com.google.common.collect.Lists;
 
+/**
+ * Definition of the state machine
+ */
 @ToString
 public class StateMachineDefinition extends Nameable {
 
